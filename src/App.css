@@ -20,6 +20,11 @@ h3 {
   font-size: 18px;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 /*------------------------------------HEADER-------------------------------------------*/
 /*-------------------TOP-BAR-------------------*/
 .top-bar {
@@ -138,7 +143,7 @@ h3 {
 
 .cart {
   width: 350px;
-  height: 200px;
+  height: 100%;
   background-color: white;
   border-radius: 5px;
   display: flex;
@@ -177,8 +182,34 @@ h3 {
   padding: 50px 0;
 }
 
+.add-remove-icons {
+  filter: invert(70%) sepia(41%) saturate(6611%) hue-rotate(136deg)
+    brightness(97%) contrast(101%);
+}
+
 .cart-list {
   margin: 10px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-counter {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.cart-product {
+  flex: 1 1;
+}
+
+.cart-amount {
+  width: 85px;
+  text-align: right;
 }
 
 /*------------------------------------FOOTER-------------------------------------------*/
