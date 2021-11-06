@@ -11,6 +11,33 @@ function App() {
 
   const [cart, setCart] = useState([]);
 
+  const addToCart = (meal) => {
+    const newCart = [...cart];
+
+    const exist = newCart.find((elem) => elem.id === meal.id);
+
+    if (exist) {
+      exist.quantity++;
+      setCart(newCart);
+    } else {
+      meal.quantity = 1;
+      newCart.push(meal);
+      setCart(newCart);
+    }
+  };
+
+  const substractFromCart = (meal) => {
+    const newCart = [...cart];
+    const exist = newCart.find((elem) => elem.id === meal.id);
+    if (exist.quantity === 1) {
+      const index = newCart.indexOf(exist);
+      newCart.splice(index, 1);
+    } else {
+      exist.quantity--;
+    }
+    setCart(newCart);
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -95,9 +122,7 @@ function App() {
                               <div
                                 className="meal-card-text"
                                 onClick={() => {
-                                  const newCart = [...cart];
-                                  newCart.push(meal);
-                                  setCart(newCart);
+                                  addToCart(meal);
                                 }}
                               >
                                 <h3>{meal.title}</h3>
@@ -153,9 +178,21 @@ function App() {
                   return (
                     <div className="cart-item">
                       <div className="cart-counter">
-                        <button>{minusIcon}</button>
-                        <span>1</span>
-                        <button>{plusIcon}</button>
+                        <button
+                          onClick={() => {
+                            substractFromCart(product);
+                          }}
+                        >
+                          {minusIcon}
+                        </button>
+                        <span>{product.quantity}</span>
+                        <button
+                          onClick={() => {
+                            addToCart(product);
+                          }}
+                        >
+                          {plusIcon}
+                        </button>
                       </div>
                       <span className="cart-product">{product.title}</span>
                       <span className="cart-amount">{product.price} €</span>
