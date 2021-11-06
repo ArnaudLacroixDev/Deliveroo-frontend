@@ -38,6 +38,8 @@ function App() {
     setCart(newCart);
   };
 
+  let total = 0;
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -175,33 +177,41 @@ function App() {
             <div className="cart-list">
               {cart.length > 0 ? (
                 cart.map((product, index) => {
+                  total += product.quantity * product.price;
+
                   return (
-                    <div className="cart-item">
-                      <div className="cart-counter">
-                        <button
-                          onClick={() => {
-                            substractFromCart(product);
-                          }}
-                        >
-                          {minusIcon}
-                        </button>
-                        <span>{product.quantity}</span>
-                        <button
-                          onClick={() => {
-                            addToCart(product);
-                          }}
-                        >
-                          {plusIcon}
-                        </button>
+                    <div>
+                      <div className="cart-item">
+                        <div className="cart-counter">
+                          <button
+                            onClick={() => {
+                              substractFromCart(product);
+                            }}
+                          >
+                            {minusIcon}
+                          </button>
+                          <span>{product.quantity}</span>
+                          <button
+                            onClick={() => {
+                              addToCart(product);
+                            }}
+                          >
+                            {plusIcon}
+                          </button>
+                        </div>
+                        <span className="cart-product">{product.title}</span>
+                        <span className="cart-amount">{product.price} €</span>
                       </div>
-                      <span className="cart-product">{product.title}</span>
-                      <span className="cart-amount">{product.price} €</span>
                     </div>
                   );
                 })
               ) : (
                 <p className="empty-cart">Votre panier est vide</p>
               )}
+            </div>
+            <div className="total-line">
+              <span>TOTAL</span>
+              <span>{total.toFixed(2)} €</span>
             </div>
           </div>
         </div>
