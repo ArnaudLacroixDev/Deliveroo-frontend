@@ -79,7 +79,10 @@ function App() {
   );
 
   return isLoading ? (
-    <span>En cours de chargement</span>
+    <div class="loader-div">
+      <div class="loader"></div>
+      <p>En cours de chargement...</p>
+    </div>
   ) : (
     <div>
       {/*--------------------------------------HEADER------------------------------------- */}
