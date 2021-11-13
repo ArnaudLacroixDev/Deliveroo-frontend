@@ -120,13 +120,13 @@ function App() {
                       <div className="meal-section">
                         {category.meals.map((meal) => {
                           return (
-                            <div className="meal-card">
-                              <div
-                                className="meal-card-text"
-                                onClick={() => {
-                                  addToCart(meal);
-                                }}
-                              >
+                            <div
+                              className="meal-card"
+                              onClick={() => {
+                                addToCart(meal);
+                              }}
+                            >
+                              <div className="meal-card-text">
                                 <h3>{meal.title}</h3>
                                 <p className="meal-card-text-description">
                                   {meal.description}
