@@ -92,13 +92,20 @@ button {
 
 .meal-card {
   display: flex;
-  width: 370px;
+  justify-content: space-between;
+  width: 400px;
   height: 160px;
+  box-sizing: border-box;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 10px 0px;
   padding: 15px;
   cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.meal-card:hover {
+  box-shadow: 0 22px 24px 0 rgb(46 51 51 / 7%);
 }
 
 .meal-card-text {
