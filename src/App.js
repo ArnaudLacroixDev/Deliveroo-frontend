@@ -6,7 +6,7 @@ import popularStar from "./img/popular-star.svg";
 
 import Loader from "./components/Loader";
 import Header from "./components/Header";
-import Main from "./components/Main";
+import Main from "./containers/Main";
 
 function App() {
   const [data, setData] = useState();
