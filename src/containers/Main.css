@@ -20,58 +20,6 @@ main {
   flex-wrap: wrap;
 }
 
-.main-meal-card {
-  display: flex;
-  justify-content: space-between;
-  width: 400px;
-  height: 160px;
-  box-sizing: border-box;
-  background-color: white;
-  border-radius: 5px;
-  margin: 10px 0px;
-  padding: 15px;
-  cursor: pointer;
-  transition-duration: 0.3s;
-}
-
 .main-meal-card:hover {
   box-shadow: 0 22px 24px 0 rgb(46 51 51 / 7%);
-}
-
-.main-meal-card-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-.main-meal-card-text-description {
-  color: #808484;
-  height: 42px;
-  line-height: 20px;
-  overflow: hidden;
-}
-
-.main-price-and-popular {
-  display: flex;
-}
-
-.main-star {
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
-}
-
-.main-popularity {
-  color: #ff8000;
-  font-size: 15px;
-  font-weight: 700;
-  margin: 0px 10px;
-}
-
-.main-meal-card-picture img {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 5px;
 }
