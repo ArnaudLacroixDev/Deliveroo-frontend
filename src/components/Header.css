@@ -1,0 +1,40 @@
+/*-------------------TOP-BAR-------------------*/
+.header-top-bar {
+  border-bottom: 1px solid #e9ebeb;
+}
+
+.header-top-bar-center {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header-deliveroo-logo {
+  height: 60px;
+}
+
+/*-------------------RESTAURANT INFOS-------------------*/
+.header-restaurant-info-center {
+  max-width: 1200px;
+  min-height: 250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.header-restaurant-info-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-restaurant-info-texts p {
+  color: #868a8a;
+  font-size: 19px;
+  margin: 19px 30px 19px 0px;
+  line-height: 1.5;
+}
+
+.header-restaurant-info-cover {
+  width: 350px;
+  border-radius: 5px;
+}
