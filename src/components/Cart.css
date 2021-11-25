@@ -39,9 +39,10 @@
   padding: 50px 0;
 }
 
-.cart-add-remove-icons {
+.cart-add-or-remove-icons {
   filter: invert(70%) sepia(41%) saturate(6611%) hue-rotate(136deg)
     brightness(97%) contrast(101%);
+  cursor: pointer;
 }
 
 .cart-list {

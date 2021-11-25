@@ -51,7 +51,7 @@ const Cart = (props) => {
                 <div className="cart-item">
                   <div className="cart-counter">
                     <button
-                      className="cart-add-remove-icons"
+                      className="cart-add-or-remove-icons"
                       onClick={() => {
                         substractFromCart(product);
                       }}
@@ -60,7 +60,7 @@ const Cart = (props) => {
                     </button>
                     <span>{product.quantity}</span>
                     <button
-                      className="cart-add-remove-icons"
+                      className="cart-add-or-remove-icons"
                       onClick={() => {
                         addToCart(product);
                       }}
