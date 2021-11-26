@@ -27,7 +27,8 @@
   padding: 15px 0;
   font-size: 15px;
   font-weight: 700;
-  cursor: pointer;
+  /* cursor: pointer; (To be displayed if there is payment redirection)*/
+  cursor: not-allowed;
   color: white;
   background-color: #00cdbd;
   border-radius: 5px;

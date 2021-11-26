@@ -15,7 +15,7 @@ const Main = (props) => {
             {data.categories.map((category, index) => {
               return (
                 category.meals.length > 0 && (
-                  <div>
+                  <section>
                     <h2 key={index}>{category.name}</h2>
                     <div className="main-meal-section">
                       {category.meals.map((meal) => {
@@ -28,7 +28,7 @@ const Main = (props) => {
                         );
                       })}
                     </div>
-                  </div>
+                  </section>
                 )
               );
             })}

@@ -33,6 +33,7 @@ const Cart = (props) => {
           className="cart-validate-enabled"
           type="button"
           value="Valider mon panier"
+          title="Payment redirection disabled"
         />
       ) : (
         <input
