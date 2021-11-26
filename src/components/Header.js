@@ -1,5 +1,5 @@
 import "./Header.css";
-import deliverooLogo from "../img/deliveroo_logo.svg";
+import deliverooLogo from "../img/deliveroo-logo.svg";
 
 const Header = (props) => {
   const { data } = props;
