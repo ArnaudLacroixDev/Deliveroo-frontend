@@ -12,9 +12,10 @@ This project uses:
 - JS with React
 
 ### Features:
-- Restaurant card with different categories
-- Possibility to add menus to the cart
+- Items can be added to the cart
+- Possibility to in/decrease quantities directly in the cart
+- Fully responsive for mobile users
 
 ### Next features to be added:
-- Better CSS design
-- Adding responsiveness
+- Stripe payment redirection
+- Better responsive design of the cart
